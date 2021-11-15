@@ -1,0 +1,7 @@
+/.idea
+/node_modules
+/*.log
+
+# Compiled output
+/.parcel-cache
+/lib

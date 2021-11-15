@@ -1,0 +1,15 @@
+pre-commit:
+  commands:
+    prettier:
+      glob: '*.{json,css,scss,md,yaml,yml}'
+      run: pnpm format --write {staged_files}
+    eslint:
+      glob: '*.{js,jsx,ts,tsx}'
+      run: pnpm lint --fix {staged_files}
+commit-msg:
+  commands:
+    lint:
+      run: pnpm standard-commithook
+skip_output:
+  - meta
+  - success

@@ -1,0 +1,13 @@
+name: Setup environment
+description: Setup Node and install dependencies
+runs:
+  using: composite
+  steps:
+    - name: Setup Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16'
+        cache: pnpm
+    - name: Install dependencies
+      run: pnpm install
+      shell: bash
