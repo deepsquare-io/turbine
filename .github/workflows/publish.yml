@@ -1,0 +1,39 @@
+name: Publish on NPM registry
+on:
+  push:
+    branches: [main, develop]
+    tags: ['**']
+  pull_request:
+    types: [opened, reopened, synchronize]
+jobs:
+  format:
+    name: Check format with Prettier
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup environment
+        uses: ./.github/actions/setup
+      - name: Run Prettier
+        run: pnpm format
+  lint:
+    name: Lint with ESLint
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup environment
+        uses: ./.github/actions/setup
+      - name: Run ESLint
+        run: pnpm lint
+  build:
+    name: Build package with Parcel
+    needs: [format, lint]
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Setup environment
+        uses: ./.github/actions/setup
+      - name: Run Parcel
+        run: pnpm build
