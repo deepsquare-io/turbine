@@ -3,6 +3,14 @@ description: Setup Node and install dependencies
 runs:
   using: composite
   steps:
+    - name: Get pnpm latest version
+      id: pnpm
+      run: echo "::set-output name=latest-version::$(npm show pnpm version)"
+      shell: bash
+    - name: Install dependencies with pnpm
+      uses: pnpm/action-setup@v2.0.1
+      with:
+        version: ${{ steps.pnpm.outputs.latest-version }}
     - name: Setup Node.js
       uses: actions/setup-node@v2
       with:
