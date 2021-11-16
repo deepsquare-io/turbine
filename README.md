@@ -39,7 +39,7 @@ Third-parameter call be used to pass defaultProperties to the underlying compone
 import turbine from './turbine';
 
 const Card = turbine('div', 'px-6 py-4 rounded bg-grey-200', {
-  style: {minWidth: '320px'},
+  style: { minWidth: '320px' },
 });
 export default Card;
 ```
