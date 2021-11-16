@@ -1,6 +1,6 @@
 {
   "name": "@deepsquare/turbine",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Zero-dependencies efficient wrapper to build Tailwind-based React components easily.",
   "keywords": [
     "react",
