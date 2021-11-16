@@ -13,6 +13,10 @@
   "bugs": "https://github.com/deepsquare-io/turbine/issues",
   "license": "MIT",
   "author": "Mathieu Bour <mathieu@csquare.ai> (https://github.com/mathieu-bour)",
+  "files": [
+    "lib/**",
+    "src/**"
+  ],
   "source": "src/turbine.tsx",
   "main": "lib/turbine.cjs",
   "module": "lib/turbine.mjs",
@@ -22,7 +26,8 @@
     "clean": "rimraf lib",
     "format": "prettier --check '**/*.{js,ts,tsx,yml,yaml,json,md}'",
     "lint": "eslint  --ignore-path .gitignore --ext .js,.ts,.tsx .",
-    "build": "parcel build"
+    "build": "parcel build",
+    "prepublishOnly": "pnpm build"
   },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.7",
