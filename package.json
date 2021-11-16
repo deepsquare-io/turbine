@@ -15,7 +15,8 @@
   "author": "Mathieu Bour <mathieu@csquare.ai> (https://github.com/mathieu-bour)",
   "files": [
     "lib/**",
-    "src/**"
+    "src/**",
+    "CHANGELOG.md"
   ],
   "source": "src/turbine.tsx",
   "main": "lib/turbine.cjs",
