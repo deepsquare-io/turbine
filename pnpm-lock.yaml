@@ -2,6 +2,8 @@ lockfileVersion: 5.3
 
 specifiers:
   '@arkweid/lefthook': ^0.7.7
+  '@babel/core': ^7.12.0
+  '@babel/plugin-proposal-nullish-coalescing-operator': ^7.16.5
   '@csquare/prettier-config': ^1.2.0
   '@parcel/packager-ts': ^2.0.1
   '@parcel/transformer-typescript-types': ^2.0.1
@@ -20,6 +22,8 @@ specifiers:
 
 devDependencies:
   '@arkweid/lefthook': 0.7.7
+  '@babel/core': 7.13.10
+  '@babel/plugin-proposal-nullish-coalescing-operator': 7.16.5_@babel+core@7.13.10
   '@csquare/prettier-config': 1.2.0_prettier@2.4.1
   '@parcel/packager-ts': 2.0.1
   '@parcel/transformer-typescript-types': 2.0.1_typescript@4.4.4
@@ -69,14 +73,14 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/code-frame': 7.16.0
-      '@babel/generator': 7.13.9
+      '@babel/generator': 7.16.0
       '@babel/helper-compilation-targets': 7.16.3_@babel+core@7.13.10
       '@babel/helper-module-transforms': 7.16.0
       '@babel/helpers': 7.16.3
-      '@babel/parser': 7.13.10
+      '@babel/parser': 7.16.3
       '@babel/template': 7.16.0
-      '@babel/traverse': 7.13.0
-      '@babel/types': 7.13.0
+      '@babel/traverse': 7.16.3
+      '@babel/types': 7.16.0
       convert-source-map: 1.8.0
       debug: 4.3.2
       gensync: 1.0.0-beta.2
@@ -183,6 +187,11 @@ packages:
     engines: {node: '>=6.9.0'}
     dev: true
 
+  /@babel/helper-plugin-utils/7.16.5:
+    resolution: {integrity: sha512-59KHWHXxVA9K4HNF4sbHCf+eJeFe0Te/ZFGqBT4OjXhrwvA04sGfaEGsVTdsjoszq0YTP49RC9UKe5g8uN2RwQ==}
+    engines: {node: '>=6.9.0'}
+    dev: true
+
   /@babel/helper-replace-supers/7.16.0:
     resolution: {integrity: sha512-TQxuQfSCdoha7cpRNJvfaYxxxzmbxXw/+6cS7V02eeDYyhxderSoMVALvwupA54/pZcOTtVeJ0xccp1nGWladA==}
     engines: {node: '>=6.9.0'}
@@ -251,6 +260,17 @@ packages:
     hasBin: true
     dev: true
 
+  /@babel/plugin-proposal-nullish-coalescing-operator/7.16.5_@babel+core@7.13.10:
+    resolution: {integrity: sha512-YwMsTp/oOviSBhrjwi0vzCUycseCYwoXnLiXIL3YNjHSMBHicGTz7GjVU/IGgz4DtOEXBdCNG72pvCX22ehfqg==}
+    engines: {node: '>=6.9.0'}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.13.10
+      '@babel/helper-plugin-utils': 7.16.5
+      '@babel/plugin-syntax-nullish-coalescing-operator': 7.8.3_@babel+core@7.13.10
+    dev: true
+
   /@babel/plugin-syntax-flow/7.16.0_@babel+core@7.13.10:
     resolution: {integrity: sha512-dH91yCo0RyqfzWgoM5Ji9ir8fQ+uFbt9KHM3d2x4jZOuHS6wNA+CRmRUP/BWCsHG2bjc7A2Way6AvH1eQk0wig==}
     engines: {node: '>=6.9.0'}
@@ -259,6 +279,15 @@ packages:
     dependencies:
       '@babel/core': 7.13.10
       '@babel/helper-plugin-utils': 7.14.5
+    dev: true
+
+  /@babel/plugin-syntax-nullish-coalescing-operator/7.8.3_@babel+core@7.13.10:
+    resolution: {integrity: sha512-aSff4zPII1u2QD7y+F8oDsz19ew4IGEJg9SVW+bqwpwtfFleiQDMdzA/R+UlWDzfnHFCxxleFT0PMIrR36XLNQ==}
+    peerDependencies:
+      '@babel/core': ^7.0.0-0
+    dependencies:
+      '@babel/core': 7.13.10
+      '@babel/helper-plugin-utils': 7.16.5
     dev: true
 
   /@babel/plugin-transform-flow-strip-types/7.16.0_@babel+core@7.13.10:

@@ -1,6 +1,6 @@
 {
   "name": "@deepsquare/turbine",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Zero-dependencies efficient wrapper to build Tailwind-based React components easily.",
   "keywords": [
     "react",
@@ -32,6 +32,8 @@
   },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.7",
+    "@babel/core": "^7.12.0",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.16.5",
     "@csquare/prettier-config": "^1.2.0",
     "@parcel/packager-ts": "^2.0.1",
     "@parcel/transformer-typescript-types": "^2.0.1",
